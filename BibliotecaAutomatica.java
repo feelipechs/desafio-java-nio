@@ -61,7 +61,7 @@ public class BibliotecaAutomatica {
             System.out.println("======================================");
         } catch (IOException e) {
             System.out.println("======================================");
-            System.out.println("❌ Erro ao organizar biblioteca");
+            System.out.println("Erro ao organizar biblioteca");
             System.out.println("Motivo: " + e.getMessage());
             System.out.println("======================================");
         }
