@@ -15,34 +15,28 @@ public class BibliotecaAutomatica {
             System.out.println("      SISTEMA DE BIBLIOTECA ADA     ");
             System.out.println("======================================\n");
 
-            // Criar pasta principal
             if (!Files.exists(biblioteca)) {
                 Files.createDirectory(biblioteca);
                 System.out.println("📁 Biblioteca criada com sucesso.\n");
             }
 
-            // Categorias
             String[] categorias = { "Python", "Java", "Linux" };
 
-            // Livros de cada categoria
             String[][] livros = {
                 { "Python_Basico.txt", "Python_Avancado.txt" },
                 { "Java_Basico.txt", "POO_Java.txt" },
                 { "Linux_Para_Iniciantes.txt", "Comandos_Linux.txt" },
             };
 
-            // Criar categorias e livros
             for (int i = 0; i < categorias.length; i++) {
                 Path pastaCategoria = biblioteca.resolve(categorias[i]);
 
-                // Criar pasta da categoria
                 if (!Files.exists(pastaCategoria)) {
                     Files.createDirectory(pastaCategoria);
                 }
 
                 System.out.println("📂 Categoria: " + categorias[i]);
 
-                // Criar livros
                 for (String nomeLivro : livros[i]) {
                     Path arquivoLivro = pastaCategoria.resolve(nomeLivro);
 
